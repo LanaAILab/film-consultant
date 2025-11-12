@@ -22,9 +22,18 @@
 Бэкэнд : Flask
 AI : Яндекс GPT Lite
 📁 Структура проекта
-├── app.py # Приложение Flask ├── models.py # Модели данных ├── require.txt # Зависимости проекта ├── Prompts/ # Промпты для генерации ответов │ └── Prompt1.txt # Файл с системным промптом ├─ static/ # Статические файлы (CSS, JS) │ ├── style.css # Стили интерфейс │ ├── script.js # Клиентский JavaScript │ └── Film-consultant.png # Изображение └── templates/ # HTML-шаблоны └── index.html # Главная страница чата
+├── app.py                # Приложение Flask 
+├── models.py             # Модели данных 
+├── require.txt           # Зависимости проекта 
+├── Prompts/              # Промпты для генерации ответов 
+│ └── Prompt1.txt         # Файл с системным промптом 
+├─ static/                # Статические файлы (CSS, JS) 
+│ ├── style.css           # Стили интерфейс 
+│ ├── script.js           # Клиентский JavaScript 
+│ └── Film-consultant.png # Изображение 
+└── templates/            # HTML-шаблоны 
+  └── index.html          # Главная страница чата
 
-текст
 
 🎨 Особенности дизайна
 🎨 Оранжево-фиолетовая цветочная гамма
