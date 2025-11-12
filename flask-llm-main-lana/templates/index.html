@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кино-консультант Фил</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Консультант по кино на базе Yandex GPT Lite</h1>
+        </header>
+        
+        <div class="content-wrapper">
+            <div class="left-panel">
+                <div class="image-placeholder">
+                    <img src="{{ url_for('static', filename='film-consultant.png') }}" alt="Фил - кино-консультант">
+                </div>
+                <div class="features">
+                    <ul>
+                        <li>Помогу выбрать фильм, мультфильм или сериал</li>
+                        <li>Кратко расскажу, о чем картина</li>
+                        <li>Найду кино по жанру, актерам, режиссерам</li>
+                        <li>Предложу фильм под настроение</li>
+                        <li>Подскажу, на каких сервисах смотреть</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="right-panel">
+                <div class="welcome-message">
+                    <h2>Привет, я – Фил, твой помощник в вопросе «Что же сегодня посмотреть?»</h2>
+                    <p>Знаю все о кино, только спроси!</p>
+                </div>
+                
+                <div class="chat-container">
+                    <div id="chat-box" class="chat-box">
+                        {% for entry in chat_history %}
+                            <div class="message user"><strong>Вы:</strong> {{ entry.user_message }}</div>
+                            <div class="message llm"><strong>Фил:</strong> {{ entry.llm_reply }}</div>
+                        {% endfor %}
+                    </div>
+                    <form id="chat-form" autocomplete="off">
+                        <input type="text" id="user-input" placeholder="Пример: Что посмотреть с друзьями на Хеллоуин?" required>
+                        <button type="submit">Отправить</button>
+                    </form>
+                </div>
+                
+                <div class="footer-note">
+                    <p>Заваривай чай и захвати вкусняшки. Приятного просмотра!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
