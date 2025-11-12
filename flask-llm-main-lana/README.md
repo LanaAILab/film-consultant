@@ -58,7 +58,7 @@ text
 
 - Python 3.8 или выше: [скачать Python](https://www.python.org/downloads/)
 - Расширение Python в VsCode
-- Git (для клонирования репозитория): [скачать Git](https://git-scm.com/downloads)
+- Git (для клонирования репозитория): [скачать Git](https://github.com/LanaAILab/film-consultant/tree/main))
 - Аккаунт Яндекс Cloud для работы с API
 
 ### 2. Клонирование репозитория
@@ -66,7 +66,7 @@ text
 Откройте терминал или командную строку и выполните:
 
 ```bash
-git clone https://github.com/labintsev/flask-llm.git
+git clone [https://github.com/LanaAILab/film-consultant.git]
 cd flask-llm
 3. Создание виртуального окружения
 Чтобы не "засорять" вашу систему, создайте виртуальное окружение:
